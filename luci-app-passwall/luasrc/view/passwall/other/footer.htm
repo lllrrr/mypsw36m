@@ -7,7 +7,7 @@ local dsp = require "luci.dispatcher"
 	var _status = document.getElementsByClassName('_status');
 	for (var i = 0; i < _status.length; i++) {
 		var id = _status[i].getAttribute("socks_id");
-		XHR.get('<%=dsp.build_url("admin/vpn/passwall/socks_status")%>', {
+		XHR.get('<%=dsp.build_url("admin/services/passwall/socks_status")%>', {
 				index: i,
 				id: id
 			},
